@@ -221,7 +221,7 @@ pnpm changeset:version
 pnpm changeset:publish
 ```
 
-For detailed information, see our [Changesets Documentation](.changeset/CHANGESETS.md) and the official [Changesets Documentation](https://github.com/changesets/changesets).
+For detailed information, see our [Changesets Documentation](README_CHANGESETS.md) and the official [Changesets Documentation](https://github.com/changesets/changesets).
 
 ## Contributing
 
