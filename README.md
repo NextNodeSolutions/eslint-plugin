@@ -124,6 +124,22 @@ export default [
 - TypeScript >= 5.8.2
 - ESLint >= 9.22.0
 
+## Contributing
+
+This project uses [Changesets](https://github.com/changesets/changesets) for version management. When contributing:
+
+1. Make your changes
+2. Run `pnpm changeset` to create a changeset describing your changes
+3. Commit the changeset file along with your changes
+4. Create a Pull Request
+
+The changeset workflow will automatically:
+- Ensure all PRs include a changeset
+- Create version bump PRs when changes are merged
+- Publish new versions to npm
+
+For more details, see [.changeset/README.md](.changeset/README.md).
+
 ## License
 
 ISC

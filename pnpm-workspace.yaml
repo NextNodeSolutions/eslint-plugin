@@ -1,8 +1,0 @@
-packages:
-  - 'src'
-  - 'packages/*'
-
-onlyBuiltDependencies:
-  - '@biomejs/biome'
-  - node
-  - unrs-resolver
