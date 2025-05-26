@@ -23,14 +23,14 @@
     "node": ">= 20.0.0"
   },
   "exports": {
-    "./react": "./react.js",
-    "./next": "./next.js",
-    "./base": "./index.js"
+    "./react": "./src/react.js",
+    "./next": "./src/next.js",
+    "./base": "./src/index.js"
   },
   "files": [
-    "index.js",
-    "react.js",
-    "next.js"
+    "src/index.js",
+    "src/react.js",
+    "src/next.js"
   ],
   "keywords": [
     "eslint",
