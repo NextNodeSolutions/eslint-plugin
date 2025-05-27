@@ -3,6 +3,7 @@ import pluginReact from 'eslint-plugin-react'
 import pluginReactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 
+/** @type {import("eslint").Linter.Config[]} */
 export default [
 	...baseConfig,
 	{
