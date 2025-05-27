@@ -8,7 +8,7 @@ import globals from 'globals'
 
 const tsConfigPath = process.cwd()
 
-/** @type {import("eslint").Linter.Config} */
+/** @type {import("eslint").Linter.Config[]} */
 export default [
 	js.configs.recommended,
 	importX.flatConfigs.recommended,
