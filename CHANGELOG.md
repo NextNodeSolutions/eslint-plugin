@@ -1,5 +1,13 @@
 # @nextnode/eslint-plugin
 
+## 1.1.2
+
+### Patch Changes
+
+- [#9](https://github.com/NextNodeSolutions/eslint-plugin/pull/9) [`93a910e`](https://github.com/NextNodeSolutions/eslint-plugin/commit/93a910e6a2caec54a4f8f74014119c2807d02dcc) Thanks [@walid-mos](https://github.com/walid-mos)! - Fix TypeScript configuration spread causing "Unexpected key '0'" error
+
+  Moves TypeScript configs (importX.flatConfigs.typescript and tseslint.configs.recommended) to be spread in the main array instead of inside a configuration object, preventing ESLint configuration errors.
+
 ## 1.1.1
 
 ### Patch Changes
