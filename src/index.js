@@ -84,11 +84,13 @@ export default [
 		},
 	},
 
+	// TypeScript configs and rules
+	...importX.flatConfigs.typescript,
+	...tseslint.configs.recommended,
+
 	// TypeScript-specific configuration
 	{
 		files: ['**/*.ts', '**/*.tsx'],
-		...importX.flatConfigs.typescript,
-		...tseslint.configs.recommended,
 		languageOptions: {
 			parser: tsParser,
 			parserOptions: {
