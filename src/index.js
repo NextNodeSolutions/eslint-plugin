@@ -21,6 +21,10 @@ export default [
 			'node_modules/',
 			'eslint.config.mjs',
 		],
+	},
+	// Configuration for TypeScript files only
+	{
+		files: ['**/*.ts', '**/*.tsx'],
 		languageOptions: {
 			parser: tsParser,
 			parserOptions: {
