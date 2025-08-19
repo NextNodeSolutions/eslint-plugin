@@ -10,10 +10,10 @@ const tsConfigPath = process.cwd()
 
 /** @type {import("eslint").Linter.Config[]} */
 export default [
+	// Base configs for all files
 	js.configs.recommended,
 	importX.flatConfigs.recommended,
-	importX.flatConfigs.typescript,
-	...tseslint.configs.recommended,
+
 	{
 		ignores: [
 			// Ignore dotfiles
@@ -21,12 +21,11 @@ export default [
 			'node_modules/',
 			'eslint.config.mjs',
 		],
+	},
+
+	// Common configuration for all JS/TS files
+	{
 		languageOptions: {
-			parser: tsParser,
-			parserOptions: {
-				project: true,
-				tsconfigRootDir: tsConfigPath,
-			},
 			ecmaVersion: 'latest',
 			sourceType: 'module',
 			globals: {
@@ -35,34 +34,18 @@ export default [
 			},
 		},
 		settings: {
-			'import-x/resolver': {
-				typescript: {
-					project: tsConfigPath,
-				},
-			},
 			node: {
 				extensions: ['.mjs', '.cjs', '.js', '.jsx', '.ts', '.tsx'],
 			},
 		},
 		rules: {
-			// JS
-			'no-unused-vars': 'off',
+			// Common JS rules
 			'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
-			'no-unused-vars': 0,
 			'arrow-body-style': ['error', 'as-needed'],
 			'prefer-arrow-callback': 'error',
 			'consistent-return': 'error',
 
-			// TS
-			'@typescript-eslint/no-unused-vars': [
-				'error',
-				{ argsIgnorePattern: '^_', ignoreRestSiblings: true },
-			],
-			'@typescript-eslint/no-var-requires': 0,
-			'@typescript-eslint/consistent-type-imports': 'error',
-			'@typescript-eslint/explicit-function-return-type': 'error',
-
-			// Import
+			// Import rules
 			'import-x/order': [
 				'error',
 				{
@@ -98,6 +81,48 @@ export default [
 			'import-x/no-unresolved': 'off',
 			'import-x/no-extraneous-dependencies': 'off',
 			'import-x/prefer-default-export': 'off',
+		},
+	},
+
+	// TypeScript-specific configuration
+	{
+		files: ['**/*.ts', '**/*.tsx'],
+		...importX.flatConfigs.typescript,
+		...tseslint.configs.recommended,
+		languageOptions: {
+			parser: tsParser,
+			parserOptions: {
+				project: true,
+				tsconfigRootDir: tsConfigPath,
+			},
+		},
+		settings: {
+			'import-x/resolver': {
+				typescript: {
+					project: tsConfigPath,
+				},
+			},
+		},
+		rules: {
+			// Override JS rules for TS
+			'no-unused-vars': 'off',
+
+			// TypeScript-specific rules
+			'@typescript-eslint/no-unused-vars': [
+				'error',
+				{ argsIgnorePattern: '^_', ignoreRestSiblings: true },
+			],
+			'@typescript-eslint/no-var-requires': 0,
+			'@typescript-eslint/consistent-type-imports': 'error',
+			'@typescript-eslint/explicit-function-return-type': 'error',
+		},
+	},
+
+	// CommonJS-specific configuration
+	{
+		files: ['**/*.cjs'],
+		languageOptions: {
+			sourceType: 'commonjs',
 		},
 	},
 ]
