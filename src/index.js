@@ -85,8 +85,8 @@ export default [
 	},
 
 	// TypeScript configs and rules
-	...importX.flatConfigs.typescript,
-	...tseslint.configs.recommended,
+	importX.flatConfigs.typescript,
+	tseslint.configs.recommended,
 
 	// TypeScript-specific configuration
 	{
