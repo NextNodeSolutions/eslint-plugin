@@ -52,7 +52,6 @@ export default [
 			// JS
 			'no-unused-vars': 'off',
 			'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
-			'no-unused-vars': 0,
 			'arrow-body-style': ['error', 'as-needed'],
 			'prefer-arrow-callback': 'error',
 			'consistent-return': 'error',
