@@ -1,5 +1,13 @@
 # @nextnode/eslint-plugin
 
+## 1.1.3
+
+### Patch Changes
+
+- [#13](https://github.com/NextNodeSolutions/eslint-plugin/pull/13) [`f727f9c`](https://github.com/NextNodeSolutions/eslint-plugin/commit/f727f9cd86ca21bc4c7ccca5db9d4db567893fec) Thanks [@walid-mos](https://github.com/walid-mos)! - Fix CommonJS file handling in ESLint configuration
+
+  Corrects TypeScript flat config usage to properly handle .cjs files without TypeScript parser conflicts. Removes spread operators that were causing configuration errors and ensures CommonJS files are linted with appropriate JavaScript rules.
+
 ## 1.1.2
 
 ### Patch Changes
