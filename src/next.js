@@ -1,5 +1,6 @@
-import reactConfig from './react.js'
 import pluginNext from '@next/eslint-plugin-next'
+
+import reactConfig from './react.js'
 
 /** @type {import("eslint").Linter.Config[]} */
 export default [

@@ -1,7 +1,8 @@
-import baseConfig from './index.js'
 import pluginReact from 'eslint-plugin-react'
-import pluginReactHooks from 'eslint-plugin-react-hooks'
+import * as pluginReactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
+
+import baseConfig from './index.js'
 
 /** @type {import("eslint").Linter.Config[]} */
 export default [
