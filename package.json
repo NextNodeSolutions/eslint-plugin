@@ -1,6 +1,6 @@
 {
 	"name": "@nextnode/eslint-plugin",
-	"version": "1.1.3",
+	"version": "1.2.0",
 	"description": "Typescript + React rules enforcement",
 	"keywords": [
 		"eslint",
