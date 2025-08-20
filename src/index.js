@@ -1,9 +1,9 @@
 import 'eslint-plugin-only-warn'
 
 import js from '@eslint/js'
-import importX from 'eslint-plugin-import-x'
-import tsParser from '@typescript-eslint/parser'
-import tseslint from 'typescript-eslint'
+import { flatConfigs as importXFlatConfigs } from 'eslint-plugin-import-x'
+import * as tsParser from '@typescript-eslint/parser'
+import { configs as tseslintConfigs } from 'typescript-eslint'
 import globals from 'globals'
 
 const tsConfigPath = process.cwd()
@@ -12,7 +12,7 @@ const tsConfigPath = process.cwd()
 export default [
 	// Base configs for all files
 	js.configs.recommended,
-	importX.flatConfigs.recommended,
+	importXFlatConfigs.recommended,
 
 	{
 		ignores: [
@@ -85,8 +85,8 @@ export default [
 	},
 
 	// TypeScript configs and rules
-	importX.flatConfigs.typescript,
-	tseslint.configs.recommended,
+	importXFlatConfigs.typescript,
+	...tseslintConfigs.recommended,
 
 	// TypeScript-specific configuration
 	{
