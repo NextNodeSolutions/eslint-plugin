@@ -1,5 +1,16 @@
 # @nextnode/eslint-plugin
 
+## 1.3.0
+
+### Minor Changes
+
+- [#18](https://github.com/NextNodeSolutions/eslint-plugin/pull/18) [`d06ca34`](https://github.com/NextNodeSolutions/eslint-plugin/commit/d06ca34a23bc31c08549883b4d38a12a7311be52) Thanks [@walid-mos](https://github.com/walid-mos)! - Add ESLint configuration and fix TypeScript flat config usage
+
+  - Add eslint.config.mjs that uses our own ESLint rules to lint the plugin itself
+  - Fix "Unexpected array" error by correctly handling TypeScript flat configs
+  - Improve import patterns and fix code style issues throughout the codebase
+  - Remove unused TypeScript declaration files
+
 ## 1.2.0
 
 ### Minor Changes
