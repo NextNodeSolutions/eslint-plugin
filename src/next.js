@@ -1,4 +1,4 @@
-import pluginNext from '@next/eslint-plugin-next'
+import pluginNext, { configs as nextConfigs } from '@next/eslint-plugin-next'
 
 import reactConfig from './react.js'
 
@@ -13,8 +13,8 @@ export default [
 			'@next/next': pluginNext,
 		},
 		rules: {
-			...pluginNext.configs.recommended.rules,
-			...pluginNext.configs['core-web-vitals'].rules,
+			...nextConfigs.recommended.rules,
+			...nextConfigs['core-web-vitals'].rules,
 		},
 	},
 ]

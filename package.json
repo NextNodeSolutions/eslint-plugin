@@ -13,14 +13,16 @@
 	"license": "ISC",
 	"author": "Walid M",
 	"scripts": {
-		"biome-check": "biome check --write .",
 		"changeset": "changeset",
 		"changeset:publish": "changeset publish",
 		"changeset:version": "changeset version",
+		"clean": "echo 'No build artifacts to clean for ESLint plugin'",
 		"commitlint": "commitlint --edit",
+		"format": "biome check --write .",
 		"lint": "eslint --max-warnings=0 .",
 		"lint-staged": "lint-staged",
-		"prepare": "husky"
+		"prepare": "husky",
+		"test": "echo 'No tests for ESLint plugin yet'"
 	},
 	"dependencies": {
 		"@eslint/js": "^9.22.0",
